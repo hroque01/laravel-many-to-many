@@ -17,7 +17,9 @@ class TypologyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'code' => fake()->regexify('[A-Z] [0-9] {5}'),
+            'name' => fake()->words(rand(1, 5), true),
+            'digital' => fake()->boolean(),
         ];
     }
 }
